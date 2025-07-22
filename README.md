@@ -1,12 +1,17 @@
-# React + Vite
+✅ 1. Debouncing Logic (Explanation)
+If delay between keystrokes > 200ms → fire API call.
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+If user types fast (i.e., < 200ms between keystrokes) → skip API calls.
 
-Currently, two official plugins are available:
+This avoids overloading your app and reduces rate limits from YouTube API.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+CACHING
 
-## Expanding the ESLint configuration
+Purpose:
+The searchSlice manages caching of search suggestions to avoid repeated API calls for the same query, improving performance and user experience.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Structure & Initial State:
+It uses an empty object ({}) as the initial state, where each key will be a search query, and the value will be the list of suggestions returned from the API.
+
+Reducer Logic - cacheResults:
+The cacheResults reducer merges new cache entries into the current state using Object.assign(state, action.payload), enabling multiple query results to be cached without overwriting existing ones.
