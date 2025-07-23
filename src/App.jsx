@@ -4,7 +4,7 @@ import { Provider } from 'react-redux';
 import store from './utils/store'; 
 import { createBrowserRouter, RouterProvider } from 'react-router-dom';
 import MainContainer from './components/MainContainer';
-import WatchPage from './components/Watchpage';
+import WatchPage from './components/WatchPage';
 
 const appRouter = createBrowserRouter([
   {
