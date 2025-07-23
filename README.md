@@ -15,3 +15,7 @@ It uses an empty object ({}) as the initial state, where each key will be a sear
 
 Reducer Logic - cacheResults:
 The cacheResults reducer merges new cache entries into the current state using Object.assign(state, action.payload), enabling multiple query results to be cached without overwriting existing ones.
+
+DIFF BW 
+WEBSOCKETS-BINANCE TRADING,WHATSAPP UI SYSTEM BI COMMUNICATE NO REGULAR INTERVAL
+API POLLING-GMAIL,CRICBUZZ COMMENTARY ONE WAY LINE ,LIVE CHAT YOUTUBE
