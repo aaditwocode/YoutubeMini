@@ -19,3 +19,34 @@ The cacheResults reducer merges new cache entries into the current state using O
 DIFF BW 
 WEBSOCKETS-BINANCE TRADING,WHATSAPP UI SYSTEM BI COMMUNICATE NO REGULAR INTERVAL
 API POLLING-GMAIL,CRICBUZZ COMMENTARY ONE WAY LINE ,LIVE CHAT YOUTUBE
+
+////
+📌 useMemo Hook in React
+🔍 What is useMemo?
+useMemo is a React Hook that memoizes a computed value, recomputing it only when its dependencies change. This helps optimize performance by preventing expensive recalculations on every render.
+
+🧠 Syntax
+const memoizedValue = useMemo(() => computeExpensiveValue(a, b), [a, b]);
+computeExpensiveValue is a function whose result will be memoized.
+
+[a, b] is the dependency array: recompute only if any of these change.
+
+memoizedValue holds the cached result.
+
+////
+📌 useCallback Hook in React
+🔍 What is useCallback?
+useCallback memoizes a function, so it doesn’t get recreated on every render unless its dependencies change — useful when passing callbacks to optimized child components.
+
+🧠 Syntax
+const memoizedCallback = useCallback(() => {
+  // function logic
+}, [dependencies]);
+
+////
+📌 useRef Hook in React
+🔍 What is useRef?
+useRef gives you a mutable reference that persists between renders — useful for DOM access, storing instance variables, or keeping previous state.
+
+🧠 Syntax
+const myRef = useRef(initialValue);
